@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Wiki for Paws & Pickaxes — a pixel survival adventure game. Discover crafting recipes, mobs, bosses, and more!">
+    <title>Paws & Pickaxes — Official Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particles"></canvas>
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+        <span class="logo-paw">🐾</span>
+        <span class="logo-text">P&P <span class="logo-version">v2.0</span></span>
+    </div>
+    <div class="sidebar-nav">
+        <a href="#hero" class="nav-link active" data-section="hero">🏠 Home</a>
+        <a href="#basics" class="nav-link" data-section="basics">📖 Basics</a>
+        <a href="#ores" class="nav-link" data-section="ores">⛏️ Ores & Materials</a>
+        <a href="#crafting" class="nav-link" data-section="crafting">🔨 Crafting</a>
+        <a href="#alchemy" class="nav-link" data-section="alchemy">⚗️ Alchemy</a>
+        <a href="#mobs" class="nav-link" data-section="mobs">👾 Mobs</a>
+        <a href="#bosses" class="nav-link" data-section="bosses">💀 Bosses</a>
+        <a href="#weapons" class="nav-link" data-section="weapons">⚔️ Weapons</a>
+        <a href="#progression" class="nav-link" data-section="progression">🚀 Progression</a>
+    </div>
+    <div class="sidebar-download">
+        <a href="https://github.com/Slayrek/Paws-Pickaxes/releases/download/v2.0.0/Paws%20n%20Pickaxes.exe" class="dl-btn-mini">
+            ⬇ Download v2.0.0
+        </a>
+    </div>
+</nav>
+
+<!-- HAMBURGER -->
+<button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+</button>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-badge">🎮 Now Available for Windows</div>
+        <h1 class="hero-title">Paws <span class="amp">&</span> Pickaxes</h1>
+        <p class="hero-subtitle">Mine. Craft. Brew. Survive. <span class="highlight">Reach the stars.</span></p>
+        <p class="hero-desc">
+            A pixel-art 2D survival adventure built entirely in Python. Dig through caves, fight nightmarish bosses, 
+            brew powerful potions, and build a rocket to escape the planet.
+        </p>
+        <div class="hero-buttons">
+            <a href="https://github.com/Slayrek/Paws-Pickaxes/releases/download/v2.0.0/Paws%20n%20Pickaxes.exe"
+               class="btn-primary" id="download-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download for Windows
+            </a>
+            <a href="https://github.com/Slayrek/Paws-Pickaxes" class="btn-secondary" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <span class="stat-num">59+</span>
+                <span class="stat-label">Craftable Items</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">5</span>
+                <span class="stat-label">Enemy Types</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Epic Bosses</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">32 MB</span>
+                <span class="stat-label">Download Size</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BASICS ===== -->
+    <section id="basics" class="section">
+        <h2 class="section-title"><span class="icon">📖</span> Basics</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Controls</h3>
+                <table class="key-table">
+                    <tr><td><kbd>A / D</kbd></td><td>Move left / right</td></tr>
+                    <tr><td><kbd>W / Space</kbd></td><td>Jump</td></tr>
+                    <tr><td><kbd>S</kbd></td><td>Drop through platform</td></tr>
+                    <tr><td><kbd>Left Click</kbd></td><td>Attack / Place block</td></tr>
+                    <tr><td><kbd>Right Click</kbd></td><td>Mine block</td></tr>
+                    <tr><td><kbd>E</kbd></td><td>Interact (open chests, etc.)</td></tr>
+                    <tr><td><kbd>I</kbd></td><td>Open full inventory</td></tr>
+                    <tr><td><kbd>1–9</kbd></td><td>Select hotbar slot</td></tr>
+                    <tr><td><kbd>Scroll</kbd></td><td>Switch hotbar slot</td></tr>
+                    <tr><td><kbd>Esc</kbd></td><td>Close UI / Pause</td></tr>
+                </table>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>World & Biomes</h3>
+                <ul class="info-list">
+                    <li><span class="tag tag-green">Surface</span> Grass, trees, and early mobs. Start here.</li>
+                    <li><span class="tag tag-brown">Underground</span> Stone caves with coal, iron, gold ores.</li>
+                    <li><span class="tag tag-blue">Deep</span> Titanium ore and copper — rare and valuable.</li>
+                    <li><span class="tag tag-red">Lava Layer</span> Extreme heat zone. Requires fire resistance potion!</li>
+                    <li><span class="tag tag-purple">Dungeon</span> Gargoyle bosses guard rare chests.</li>
+                    <li><span class="tag tag-orange">Rocket Pad</span> Your launchpad — the final goal!</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>Progression Path</h3>
+                <ol class="progress-list">
+                    <li>Collect <strong>Wood & Stone</strong> → Craft Workbench</li>
+                    <li>Smelt ores in the <strong>Furnace</strong></li>
+                    <li>Fight <strong>Gargoyle</strong> in dungeons for rare loot</li>
+                    <li>Craft <strong>Abyssal Sigil</strong> → Summon the final boss</li>
+                    <li>Defeat <strong>Abyssal Behemoth</strong> for <strong>Quantum Engine</strong></li>
+                    <li>Craft the <strong>Rocket</strong> and launch to space! 🚀</li>
+                </ol>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌲</div>
+                <h3>Platforms</h3>
+                <ul class="info-list">
+                    <li>🪵 <strong>Wooden Platforms</strong> are one-way floors</li>
+                    <li>Jump <strong>up through</strong> them from below</li>
+                    <li>Press <kbd>S</kbd> while standing on them to <strong>drop down</strong></li>
+                    <li>Great for building boss arenas!</li>
+                    <li>Recipe: <strong>1 Wood → 4 Platforms</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORES ===== -->
+    <section id="ores" class="section">
+        <h2 class="section-title"><span class="icon">⛏️</span> Ores & Materials</h2>
+        <div class="table-wrapper">
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Found At</th>
+                        <th>Smelted Into</th>
+                        <th>Tier</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>🪨 Stone</td><td>Surface+</td><td>—</td><td><span class="tier tier-1">Tier 1</span></td><td>Mined anywhere underground</td></tr>
+                    <tr><td>🪵 Wood</td><td>Surface</td><td>—</td><td><span class="tier tier-1">Tier 1</span></td><td>Cut from trees</td></tr>
+                    <tr><td>🖤 Coal</td><td>Underground</td><td>Fuel</td><td><span class="tier tier-1">Tier 1</span></td><td>Powers the furnace</td></tr>
+                    <tr><td>🟤 Copper Ore</td><td>Underground</td><td>Copper Ingot</td><td><span class="tier tier-2">Tier 2</span></td><td>For wires & circuits</td></tr>
+                    <tr><td>⚙️ Iron Ore</td><td>Underground</td><td>Iron Ingot</td><td><span class="tier tier-2">Tier 2</span></td><td>Bread-and-butter metal</td></tr>
+                    <tr><td>🟡 Gold Ore</td><td>Deep</td><td>Gold Ingot</td><td><span class="tier tier-3">Tier 3</span></td><td>Needed for circuits</td></tr>
+                    <tr><td>🔵 Titanium Ore</td><td>Deep</td><td>Titanium Ingot</td><td><span class="tier tier-4">Tier 4</span></td><td>The strongest metal</td></tr>
+                    <tr><td>💎 Ruby</td><td>Deep / Rare Chests</td><td>—</td><td><span class="tier tier-5">Tier 5</span></td><td>Used in top-tier gear</td></tr>
+                    <tr><td>🔴 Magma Clot</td><td>Lava fishing</td><td>—</td><td><span class="tier tier-4">Tier 4</span></td><td>Only from lava fishing rod</td></tr>
+                    <tr><td>🟢 Slimeball</td><td>Slime drops</td><td>—</td><td><span class="tier tier-2">Tier 2</span></td><td>Used for bow & hook</td></tr>
+                    <tr><td>🦇 Bat Wing</td><td>Bat drops</td><td>—</td><td><span class="tier tier-2">Tier 2</span></td><td>Needed for bow & hook</td></tr>
+                    <tr><td>🧠 Zombie Brain</td><td>Zombie Cat drops</td><td>—</td><td><span class="tier tier-3">Tier 3</span></td><td>Required for Abyssal Sigil</td></tr>
+                    <tr><td>🟢 Suspicious Slime</td><td>Rare drop / Event</td><td>—</td><td><span class="tier tier-5">Tier 5</span></td><td>Required for Abyssal Sigil</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== CRAFTING ===== -->
+    <section id="crafting" class="section">
+        <h2 class="section-title"><span class="icon">🔨</span> Crafting Recipes</h2>
+        <p class="section-desc">All recipes require a <strong>Workbench</strong> (4 Wood). Smelting requires a <strong>Furnace</strong> (8 Stone).</p>
+
+        <div class="recipe-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="tools">Tools</button>
+            <button class="filter-btn" data-filter="weapons">Weapons</button>
+            <button class="filter-btn" data-filter="armor">Armor</button>
+            <button class="filter-btn" data-filter="blocks">Blocks</button>
+            <button class="filter-btn" data-filter="rocket">🚀 Rocket</button>
+            <button class="filter-btn" data-filter="special">✨ Special</button>
+        </div>
+
+        <div class="recipes-grid" id="recipes-grid">
+            <!-- BLOCKS -->
+            <div class="recipe-card" data-category="blocks">
+                <div class="recipe-output">🔨 Workbench <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×4</span></div>
+                <div class="recipe-note">No workbench needed!</div>
+            </div>
+            <div class="recipe-card" data-category="blocks">
+                <div class="recipe-output">🔥 Furnace <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🪨 Stone ×8</span></div>
+            </div>
+            <div class="recipe-card" data-category="blocks">
+                <div class="recipe-output">📦 Chest <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×8</span></div>
+            </div>
+            <div class="recipe-card" data-category="blocks">
+                <div class="recipe-output">🪜 Ladder <span class="recipe-yield">×3</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×2</span></div>
+            </div>
+            <div class="recipe-card" data-category="blocks">
+                <div class="recipe-output">🪵 Wooden Platform <span class="recipe-yield">×4</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×1</span></div>
+            </div>
+
+            <!-- TOOLS -->
+            <div class="recipe-card" data-category="tools">
+                <div class="recipe-output">⛏️ Iron Pickaxe <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>⚙️ Iron Ingot ×2</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="tools">
+                <div class="recipe-output">⛏️ Gold Pickaxe <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🟡 Gold Ingot ×2</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="tools">
+                <div class="recipe-output">⛏️ Titanium Pickaxe <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔵 Titanium Ingot ×2</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="tools">
+                <div class="recipe-output">🎣 Fishing Rod <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×3</span><span>⚙️ Iron Ingot ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="tools">
+                <div class="recipe-output">🎣 Lava Fishing Rod <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔴 Magma Clot ×25</span><span>🎣 Fishing Rod ×1</span></div>
+                <div class="recipe-note">Fish in lava!</div>
+            </div>
+
+            <!-- WEAPONS -->
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">🗡️ Iron Sword <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>⚙️ Iron Ingot ×3</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">🗡️ Gold Sword <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🟡 Gold Ingot ×3</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">🗡️ Titanium Sword <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔵 Titanium Ingot ×3</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">💎 Ruby Sword <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>💎 Ruby ×3</span><span>🪵 Wood ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">🏹 Bow <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🪵 Wood ×10</span><span>🟢 Slimeball ×5</span><span>🦇 Bat Wing ×2</span></div>
+            </div>
+            <div class="recipe-card" data-category="weapons">
+                <div class="recipe-output">🪝 Grappling Hook <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>⚙️ Iron Ingot ×5</span><span>🟢 Slimeball ×3</span><span>🦇 Bat Wing ×1</span></div>
+            </div>
+            <div class="recipe-card recipe-card--legendary" data-category="weapons special">
+                <div class="recipe-output">⚡ OVERPOWERED SWORD 666 <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>💎 Ruby ×999</span><span>🔵 Titanium ×999</span><span>⚙️ Iron ×999</span>
+                    <span>🟡 Gold ×999</span><span>🪵 Wood ×999</span><span>🟤 Copper ×999</span>
+                </div>
+                <div class="recipe-note">⚠️ Practically uncraftable. 5% drop from Abyssal Behemoth!</div>
+            </div>
+
+            <!-- ARMOR -->
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">⛑️ Iron Helmet <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>⚙️ Iron Ingot ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">⛑️ Gold Helmet <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🟡 Gold Ingot ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">🛡️ Titanium Chestplate <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔵 Titanium Ingot ×8</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">⛑️ Ruby Helmet <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>💎 Ruby ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">👟 Iron Boots <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>⚙️ Iron Ingot ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">👟 Gold Boots <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🟡 Gold Ingot ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">👟 Titanium Boots <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔵 Titanium Ingot ×4</span></div>
+            </div>
+            <div class="recipe-card" data-category="armor">
+                <div class="recipe-output">👟 Ruby Boots <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>💎 Ruby ×4</span></div>
+            </div>
+
+            <!-- CIRCUITS -->
+            <div class="recipe-card" data-category="special">
+                <div class="recipe-output">🔌 Copper Wire <span class="recipe-yield">×10</span></div>
+                <div class="recipe-ingredients"><span>🟤 Copper Ingot ×1</span></div>
+            </div>
+            <div class="recipe-card" data-category="special">
+                <div class="recipe-output">✨ Gold-Plated Wire <span class="recipe-yield">×10</span></div>
+                <div class="recipe-ingredients"><span>🔌 Copper Wire ×10</span><span>🟡 Gold Ingot ×1</span></div>
+            </div>
+
+            <!-- SPECIAL -->
+            <div class="recipe-card recipe-card--boss" data-category="special">
+                <div class="recipe-output">🔮 Abyssal Sigil <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>🟢 Suspicious Slime ×1</span><span>💎 Ruby ×10</span>
+                    <span>🔵 Titanium Ingot ×10</span><span>🧠 Zombie Brain ×5</span>
+                </div>
+                <div class="recipe-note">♾️ Infinite use — summons the Abyssal Behemoth!</div>
+            </div>
+
+            <!-- ROCKET PARTS -->
+            <div class="recipe-card recipe-card--rocket" data-category="rocket">
+                <div class="recipe-output">🚀 Rocket Platform <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients"><span>🔵 Titanium ×5</span><span>⚙️ Iron ×20</span></div>
+            </div>
+            <div class="recipe-card recipe-card--rocket" data-category="rocket">
+                <div class="recipe-output">🔩 Rocket Body <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>🔵 Titanium ×20</span><span>⚙️ Iron ×20</span>
+                    <span>🟤 Copper ×50</span><span>🔌 Wire ×20</span><span>✨ Gold Wire ×10</span>
+                </div>
+            </div>
+            <div class="recipe-card recipe-card--rocket" data-category="rocket">
+                <div class="recipe-output">🛸 Rocket Top <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>🔵 Titanium ×10</span><span>⚙️ Iron ×15</span>
+                    <span>💎 Ruby ×20</span><span>🔌 Wire ×60</span><span>✨ Gold Wire ×30</span>
+                </div>
+            </div>
+            <div class="recipe-card recipe-card--rocket" data-category="rocket">
+                <div class="recipe-output">⚡ Rocket Turbine <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>🔬 Quantum Engine ×1</span><span>🔵 Titanium ×10</span>
+                    <span>⚙️ Iron ×20</span><span>💎 Ruby ×15</span>
+                    <span>🔌 Wire ×10</span><span>✨ Gold Wire ×20</span>
+                </div>
+                <div class="recipe-note">⚠️ Requires Quantum Engine from Abyssal Behemoth!</div>
+            </div>
+            <div class="recipe-card recipe-card--rocket" data-category="rocket">
+                <div class="recipe-output">🚀 Rocket (Final) <span class="recipe-yield">×1</span></div>
+                <div class="recipe-ingredients">
+                    <span>⚡ Turbine ×1</span><span>🔩 Body ×1</span><span>🛸 Top ×1</span>
+                    <span>🔌 Wire ×100</span><span>✨ Gold Wire ×150</span>
+                </div>
+                <div class="recipe-note">🏆 Complete this to WIN the game!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ALCHEMY ===== -->
+    <section id="alchemy" class="section">
+        <h2 class="section-title"><span class="icon">⚗️</span> Alchemy</h2>
+        <p class="section-desc">Use a <strong>Brewing Stand</strong> to create powerful potions. Place ingredients in the slots and press Brew.</p>
+        <div class="cards-grid">
+            <div class="card card--potion">
+                <div class="potion-color" style="background: linear-gradient(135deg, #ff4444, #aa0000);"></div>
+                <h3>💪 Strength Potion</h3>
+                <p>Doubles your attack damage for a limited time. Great for boss fights!</p>
+                <div class="potion-ing">Ingredients: <strong>Slimeball + Coal</strong></div>
+            </div>
+            <div class="card card--potion">
+                <div class="potion-color" style="background: linear-gradient(135deg, #ff8800, #aa4400);"></div>
+                <h3>🔥 Fire Resistance Potion</h3>
+                <p>Grants immunity to lava damage. <strong>Required</strong> to explore the lava layer safely!</p>
+                <div class="potion-ing">Ingredients: <strong>Magma Clot + Gold Ingot</strong></div>
+            </div>
+            <div class="card card--potion">
+                <div class="potion-color" style="background: linear-gradient(135deg, #44ff88, #008844);"></div>
+                <h3>🌿 Jump Boost Potion</h3>
+                <p>Massively increases jump height. Useful for reaching high areas or escaping enemies.</p>
+                <div class="potion-ing">Ingredients: <strong>Slimeball + Bat Wing</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MOBS ===== -->
+    <section id="mobs" class="section">
+        <h2 class="section-title"><span class="icon">👾</span> Mobs</h2>
+        <div class="mob-grid">
+            <div class="mob-card">
+                <div class="mob-emoji">🟢</div>
+                <h3>Slime</h3>
+                <div class="mob-stats">
+                    <span class="mob-stat mob-hp">❤️ Low HP</span>
+                    <span class="mob-stat mob-dmg">⚔️ Low DMG</span>
+                    <span class="mob-stat mob-loc">🌍 Surface</span>
+                </div>
+                <p>Bouncy and harmless early on. Found on the surface during the day. Drops <strong>Slimeball</strong>.</p>
+                <div class="mob-drops">Drops: 🟢 Slimeball</div>
+            </div>
+            <div class="mob-card">
+                <div class="mob-emoji">🦇</div>
+                <h3>Bat</h3>
+                <div class="mob-stats">
+                    <span class="mob-stat mob-hp">❤️ Very Low HP</span>
+                    <span class="mob-stat mob-dmg">⚔️ Low DMG</span>
+                    <span class="mob-stat mob-loc">🕳️ Caves</span>
+                </div>
+                <p>Fast-flying cave dweller. Drops essential <strong>Bat Wings</strong> needed for the bow and grappling hook.</p>
+                <div class="mob-drops">Drops: 🦇 Bat Wing</div>
+            </div>
+            <div class="mob-card">
+                <div class="mob-emoji">🧟</div>
+                <h3>Zombie Cat</h3>
+                <div class="mob-stats">
+                    <span class="mob-stat mob-hp">❤️ Medium HP</span>
+                    <span class="mob-stat mob-dmg">⚔️ Medium DMG</span>
+                    <span class="mob-stat mob-loc">🌙 Night Surface</span>
+                </div>
+                <p>Appears at night on the surface. Walks slowly but hits hard. Drops the <strong>Zombie Brain</strong> required for the Abyssal Sigil!</p>
+                <div class="mob-drops">Drops: 🧠 Zombie Brain</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOSSES ===== -->
+    <section id="bosses" class="section">
+        <h2 class="section-title"><span class="icon">💀</span> Bosses</h2>
+
+        <div class="boss-card">
+            <div class="boss-header boss-header--gargoyle">
+                <div class="boss-portrait">🗿</div>
+                <div class="boss-info">
+                    <h3>Gargoyle</h3>
+                    <div class="boss-meta">
+                        <span class="boss-stat">❤️ 500 HP</span>
+                        <span class="boss-stat">📍 Dungeons</span>
+                        <span class="boss-stat">🔑 Auto-Spawned</span>
+                    </div>
+                </div>
+            </div>
+            <div class="boss-body">
+                <div class="boss-desc">
+                    <h4>Description</h4>
+                    <p>Stone gargoyles guard underground dungeons. They patrol their territory and fly toward the player when provoked. Defeat them to access rare chest loot.</p>
+                </div>
+                <div class="boss-attacks">
+                    <h4>Attacks</h4>
+                    <ul>
+                        <li>🪂 <strong>Fly Dive</strong> — charges toward the player at high speed</li>
+                        <li>👊 <strong>Melee Strike</strong> — deals contact damage on collision</li>
+                    </ul>
+                </div>
+                <div class="boss-loot">
+                    <h4>Loot</h4>
+                    <div class="loot-items">
+                        <span class="loot-item">💎 Ruby</span>
+                        <span class="loot-item">🔵 Titanium Ingot</span>
+                        <span class="loot-item loot-rare">⚡ Rare Chest (nearby)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boss-card boss-card--final">
+            <div class="boss-header boss-header--behemoth">
+                <div class="boss-portrait">😈</div>
+                <div class="boss-info">
+                    <h3>Abyssal Behemoth</h3>
+                    <div class="boss-meta">
+                        <span class="boss-stat">❤️ 2000 HP</span>
+                        <span class="boss-stat">⚡ 40 Contact DMG</span>
+                        <span class="boss-stat">☄️ 15 Orb DMG</span>
+                        <span class="boss-stat">🔮 Abyssal Sigil</span>
+                    </div>
+                </div>
+            </div>
+            <div class="boss-body">
+                <div class="boss-desc">
+                    <h4>Description</h4>
+                    <p>The final guardian of the world. A massive dark sphere crackling with abyssal energy — glowing red eyes, runic cracks running across its surface, and deadly spikes on all sides. It guards the <strong>Quantum Engine</strong>, the last piece you need to build your rocket.</p>
+                    <p class="boss-summon">🔮 Summon by using the <strong>Abyssal Sigil</strong> (infinite use — keep it forever!). Build an arena with wooden platforms before summoning!</p>
+                </div>
+                <div class="boss-attacks">
+                    <h4>Attacks</h4>
+                    <ul>
+                        <li>🦘 <strong>Jump Slam</strong> — launches itself at you with high speed, deals massive contact damage on landing</li>
+                        <li>☄️ <strong>Abyssal Volley</strong> — fires 3 purple-red orbs in a spread toward you. Dodge sideways!</li>
+                        <li>💥 Attacks alternate randomly — <strong>never stand still!</strong></li>
+                    </ul>
+                </div>
+                <div class="boss-tips">
+                    <h4>💡 Tips</h4>
+                    <ul>
+                        <li>Build a platform arena — stay mobile above and below</li>
+                        <li>Drink a <strong>Strength Potion</strong> before the fight</li>
+                        <li>Use the <strong>Bow</strong> from a safe distance to avoid orbs</li>
+                        <li>The boss flashes when hit — you can track damage visually</li>
+                    </ul>
+                </div>
+                <div class="boss-loot">
+                    <h4>Loot</h4>
+                    <div class="loot-items">
+                        <span class="loot-item loot-guaranteed">🔬 Quantum Engine (100%)</span>
+                        <span class="loot-item">💎 Ruby ×15</span>
+                        <span class="loot-item">🔵 Titanium Ingot ×15</span>
+                        <span class="loot-item loot-rare">⚡ OVERPOWERED SWORD 666 (5%)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WEAPONS ===== -->
+    <section id="weapons" class="section">
+        <h2 class="section-title"><span class="icon">⚔️</span> Weapons & Equipment</h2>
+        <div class="table-wrapper">
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Item</th><th>Type</th><th>Tier</th><th>Special</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>⚙️ Iron Sword</td><td>Melee</td><td><span class="tier tier-2">Tier 2</span></td><td>—</td></tr>
+                    <tr><td>🟡 Gold Sword</td><td>Melee</td><td><span class="tier tier-3">Tier 3</span></td><td>—</td></tr>
+                    <tr><td>🔵 Titanium Sword</td><td>Melee</td><td><span class="tier tier-4">Tier 4</span></td><td>—</td></tr>
+                    <tr><td>💎 Ruby Sword</td><td>Melee</td><td><span class="tier tier-5">Tier 5</span></td><td>High damage</td></tr>
+                    <tr><td>🔥 Lavacalibur</td><td>Melee</td><td><span class="tier tier-5">Tier 5</span></td><td>Fiery blade from lava layer</td></tr>
+                    <tr><td>⚡ OVERPOWERED SWORD 666</td><td>Melee</td><td><span class="tier tier-legendary">LEGEND</span></td><td>5% drop from boss. Insane power</td></tr>
+                    <tr><td>🏹 Bow</td><td>Ranged</td><td><span class="tier tier-3">Tier 3</span></td><td>25 damage per arrow</td></tr>
+                    <tr><td>🪝 Grappling Hook</td><td>Utility</td><td><span class="tier tier-3">Tier 3</span></td><td>Swing across gaps</td></tr>
+                    <tr><td>⛑️ Iron / Gold / Titanium / Ruby Helmet</td><td>Armor</td><td>Tier 2–5</td><td>Reduces damage</td></tr>
+                    <tr><td>🛡️ Titanium Chestplate</td><td>Armor</td><td><span class="tier tier-4">Tier 4</span></td><td>Heavy armor, best protection</td></tr>
+                    <tr><td>👟 Boots (all tiers)</td><td>Boots</td><td>Tier 2–5</td><td>Jump height / speed bonuses</td></tr>
+                    <tr><td>🟢 Suspicious Slime (Pet)</td><td>Pet</td><td><span class="tier tier-5">Tier 5</span></td><td>Follows you, heals passively</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== PROGRESSION ===== -->
+    <section id="progression" class="section">
+        <h2 class="section-title"><span class="icon">🚀</span> Progression Guide</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot">1</div>
+                <div class="timeline-content">
+                    <h3>Early Game — Surface Survival</h3>
+                    <p>Punch trees for wood, craft a Workbench and Furnace. Mine coal and iron. Build a shelter before night — Zombie Cats will come!</p>
+                    <div class="timeline-goals">Goal: Iron Pickaxe & Sword, Furnace built</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">2</div>
+                <div class="timeline-content">
+                    <h3>Mid Game — Underground Exploration</h3>
+                    <p>Dig deep for gold and titanium. Hunt Bats for Bat Wings (Bow & Hook). Build ladders as you descend for easy travel back up.</p>
+                    <div class="timeline-goals">Goal: Titanium gear, Grappling Hook, Bow</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">3</div>
+                <div class="timeline-content">
+                    <h3>Lava Layer — Fire & Fury</h3>
+                    <p>Brew a <strong>Fire Resistance Potion</strong> first! Fish with the Lava Fishing Rod to collect Magma Clots. Craft the Lavacalibur here.</p>
+                    <div class="timeline-goals">Goal: Ruby collection, Lavacalibur</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot">4</div>
+                <div class="timeline-content">
+                    <h3>Boss Fights — Prove Your Worth</h3>
+                    <p>Collect Zombie Brains at night. Craft the <strong>Abyssal Sigil</strong>. Build a platform arena and summon the Abyssal Behemoth. Stay mobile and dodge the orbs!</p>
+                    <div class="timeline-goals">Goal: Quantum Engine from boss drop</div>
+                </div>
+            </div>
+            <div class="timeline-item timeline-item--final">
+                <div class="timeline-dot">🚀</div>
+                <div class="timeline-content">
+                    <h3>Endgame — Build the Rocket</h3>
+                    <p>With the Quantum Engine, craft the Rocket Turbine. Assemble all 3 rocket parts and place them on the Rocket Pad. Launch to victory!</p>
+                    <div class="timeline-goals">🏆 You WIN! Paws & Pickaxes completed!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-cta">
+            <h3>Ready to play?</h3>
+            <p>Free, standalone — no installation required.</p>
+            <a href="https://github.com/Slayrek/Paws-Pickaxes/releases/download/v2.0.0/Paws%20n%20Pickaxes.exe"
+               class="btn-primary btn-large">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Paws & Pickaxes v2.0.0
+            </a>
+            <p class="dl-size">Windows 64-bit · 32 MB · No install needed</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with 🐾 and Python · <a href="https://github.com/Slayrek/Paws-Pickaxes" target="_blank">GitHub</a> · v2.0.0</p>
+    </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
